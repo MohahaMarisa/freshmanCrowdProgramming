@@ -6,6 +6,8 @@
 		<title>My Photo Page</title>
 		    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.9/p5.js"></script>
     <script type="text/javascript" src="sketch.js" ></script>
+    		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="mturk.js"></script>
 	</head>
 	<body>
 		<p>How many individuals are in the picture? Sometimes, the person is only partially shown, so computers don't count </p>
@@ -20,6 +22,9 @@
 	            <td>
 	               <img src="http://i.imgur.com/bC1whcJ.jpg?1" title="source: imgur.com" />
 	            </d>
+	            <form id="mturk_form">
+		<label>How many do you think? <input type="text" name="fruit"></label><br>
+		<input type="submit">
 	            <td>
 	                <img src="http://i.imgur.com/TDD02ku.jpg?1" title="source: imgur.com" />
 	            </d>
