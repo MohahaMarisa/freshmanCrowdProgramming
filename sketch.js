@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     // Set the Action of the form to the provided "turkSubmitTo" field
     if((submit_url=gup("turkSubmitTo"))!="") {
-      $(form_selector).attr('action', submit_url + '/mturk/externalSubmit');
+      $(this).attr('action', submit_url + '/mturk/externalSubmit');
     }
   }
 });
