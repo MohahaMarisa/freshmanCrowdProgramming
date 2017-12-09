@@ -1,18 +1,489 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Mohaha</title>
-	</head>
-	<body><h1>People Counting</h1>
-	<img src="http://bit.ly/RhrMEn" />
-		<p>How many individuals are in the picture? Sometimes, the person is only partially shown, so computers don't count </p>
-		<p>them as in the picture even though a regular person might recognize that there are more people than faces in the photo</p>
-		<p>Help us count how many people are probably in the picture. For large crowd pictures, just give it your best estimate!</p>
-		<a href="http://imgur.com/nxEjS9X"><img src="http://i.imgur.com/nxEjS9X.png?1" title="source: imgur.com" /></a>
-		<a href="http://imgur.com/tdUA52n"><img src="http://i.imgur.com/tdUA52n.jpg?1" title="source: imgur.com" /></a>
-		<a href="http://imgur.com/aDQq5BU"><img src="http://i.imgur.com/aDQq5BU.jpg?1" title="source: imgur.com" /></a>
-		<a href="http://imgur.com/uO6oBPq"><img src="http://i.imgur.com/uO6oBPq.jpg?1" title="source: imgur.com" /></a>
-		<a href="http://imgur.com/TDD02ku"><img src="http://i.imgur.com/TDD02ku.jpg?1" title="source: imgur.com" /></a>
-		<a href="http://imgur.com/bC1whcJ"><img src="http://i.imgur.com/bC1whcJ.jpg?1" title="source: imgur.com" /></a>
-	</body>
+<!--Built/frankensteined with much thanks to StackOverflow, Jon Duckett's book "HTML&CSS design and build websites", Leventa Usta, and w3schools, format inspiration from MIT Media Lab grid structure, and responsive accordian display modified from Michael Ferry's code pen, as well as a type effect js library from mattboldst, and a code pen from Naoya-->
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta charset="utf-8" />
+    <meta name="description" content="Marisa Lu's design portfolio and artwork" />
+    <meta name="keywords" content="design, HCI, interaction, portfolio, art, cmu, marisa, lu, lumar, scholarship, published, tei, gallery" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Marisa Lu" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!--<meta http-equiv="expires" content="Fri, 10 Jan 2016 23:59:59 GMT" />-->
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Marisa Lu</title>
+ 
+    <link rel="stylesheet" href="styleAVOCmenu.css" media="screen" />
+	<link rel="stylesheet" id="mqueries-style-css"  href="mqueries.css" type="text/css" media="all" />
+	<!-- <link rel="stylesheet" id="ionic-icons-style-css" href="ionicons.css" type="text/css" media="all" /> -->
+   
+
+    <link href='http://fonts.googleapis.com/css?family=Righteous&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+
+     <script src="scripts/modernizr.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+	 
+	 
+	 <!-- FAVICON
+	 <link rel="shortcut icon" href="files/uploads/favicon.png"/>
+	 FAVICON -->
+
+     <style>
+        #scrollArrow a:hover {
+            opacity: .5;
+        }
+        #scrollArrow a span {
+            position: absolute;
+/*            top: 0;*/
+            left: 50%;
+            bottom: 20px;
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 2px solid #9ED2C5;
+            border-bottom: 2px solid #9ED2C5;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-animation: sdb04 2s infinite;
+            animation: sdb04 4s infinite;
+            box-sizing: border-box;
+        }
+        @-webkit-keyframes sdb04 {
+            0% {-webkit-transform: rotate(-45deg) translate(0, 0);}
+            20% {-webkit-transform: rotate(-45deg) translate(-10px, 10px);}
+            40% {-webkit-transform: rotate(-45deg) translate(0, 0);}
+        }
+        @keyframes sdb04 {
+            0% {transform: rotate(-45deg) translate(0, 0);}
+            20% {transform: rotate(-45deg) translate(-10px, 10px);}
+            40% {transform: rotate(-45deg) translate(0, 0);}
+        }
+     </style>
+
+</head>
+
+<body>
+
+<!-- PAGELOADER -->
+<!-- <div id="page-loader">
+	<div class="page-loader-inner">
+		<div class="loader"><strong>Almost there...</strong></div>
+	</div>
+</div> -->
+<!-- PAGELOADER -->
+
+    <div class="site-container">
+		<!-- HEADER -->
+		<header id="header" class="header-transparent">        
+			<div class="header-inner clearfix">
+			
+	            <div id="logo" class="left-float">
+					<a id="dark-logo" class="logotype" href="index.html">LU/MAR/</a>
+	            </div>
+            
+	            <div id="menu" class="right-float clearfix">
+	                <a href="#" class="open-nav"><span class="hamburger"></span></a>
+                
+	            	<nav id="main-nav">
+						<ul>
+							<li class="current-menu-item"><a href="index.html">Design</a>
+	                        	<ul class="submenu">
+	                            	<li><p style="text-align:left;color:white; font-family: 'quicksand', Arial, sans-serif;font-size: 0.8em;">Design 'folio of fully documented projects</p></li>
+	                            </ul>
+	                        </li>
+							<li><a href="experiments/index.html">Computation</a>
+                                <ul class="submenu">
+                                    <li><p style="text-align:left; color:white; font-family: 'quicksand', Arial, sans-serif;font-size: 0.8em;">Sensors/signal processing, generative art + experimental apps </p></li>
+	                            </ul>
+                            </li>
+                            <li><a href="art/index.html">Art</a>
+							    <ul class="submenu">
+							        <li><p style="text-align:left; color:white; font-family: 'quicksand', Arial, sans-serif;font-size: 0.8em;">Exhibition pieces, illustration, + sketchbooks</p></li>
+							    </ul>
+							</li>
+							<li><a href="profile.html">Me</a></a></li>
+							<li><a href="LuMarisaResume.pdf" target="_blank">Resume</a></li>
+	                    </ul>
+	            	</nav>
+                
+	            </div>
+                    
+			</div> <!-- END .header-inner -->
+		</header>
+<!-- AAAAAAAAAaaaaaaaaaaaaaaaaaaaaagahaghaghaghaghgahaghgaaasdfghjkl;'lkjhgfdsasdfghjkl;lkjhgfdsasdfghjkl;'lkjhgfdsaasdfghjkl;kjhgfdsasdfghjkl;lkjhgfdsasdfghjk -->
+        <section id="hero" class="hero-full site-header cf">
+
+            <div class="cf"></div>
+            
+            	<div class="site-tagline">
+					<p></p>
+                	<p><span class="hoverIntro">Hello, I'm Marisa Lu.</span></br>I study <a href="#" class="hoverDes">Design</a> and <a href="#" class="hoverHCI">HCI</a> at <a href="#" class="hoverCMU">CMU</a>, working on projects that blur <a href="#" class="hoverDigital">digital </a>and physical interactions.</br><span style="color:red">site undergoing changes</span></p>
+
+            	</div>
+                <section id="scrollArrow" class="demo">
+                    <a href="#showcase"><span></span></a>
+                </section>
+            
+        </section>
+
+        <section class="site-content" id ="showcase">
+            
+            
+            <div class="projects-feed cf">
+
+                <article class="project cf">
+                    <a href="portfolioPages/portfolio1/index.html" title="Tangible Embedded Interactions Conference">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio1/thumbnail.jpg"></div>
+                                
+                                <!--[if (lt IE 9) & (!IEMobile)]>
+                                <div data-src="img/portfolio-1.jpg"></div>
+                                <![endif]-->
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio1/thumbnail.jpg" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title">TEI '17 Published Paper</h2>
+                                        
+                                        <p class="thumbnail-description">working demo, physical computing, research</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+                <article class="project cf">
+                    <a href="experiments/index.html" title="Cycloidic type in 3D">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio2/thumbnail.gif"></div>
+                                
+                                <!--[if (lt IE 9) & (!IEMobile)]>
+                                <div data-src="img/portfolio-2.jpg"></div>
+                                <![endif]-->
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio2/thumbnail.gif" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title">creative computing</h2>
+                                        
+                                        <p class="thumbnail-description">Interactive art + Code</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+                <article class="project cf">
+                    <a href="portfolioPages/portfolio3/index.html" title="IdeAte Studio redesign">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio3/thumbnail.gif"></div>
+                                
+                                <!--[if (lt IE 9) & (!IEMobile)]>
+                                <div data-src="img/portfolio-3.jpg"></div>
+                                <![endif]-->
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio3/thumbnail.gif" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title"> Augmented Spaces</h2>
+                                        
+                                        <p class="thumbnail-description">AfterEffects, Wireframing, UX, Ar/Vr</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+                <article class="project cf">
+                    <a href="portfolioPages/portfolio4/index.html" title="Geothermal Infographic">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio4/thumbnail.jpg"></div>
+                                
+                                <!--[if (lt IE 9) & (!IEMobile)]>
+                                <div data-src="img/portfolio-4.jpg"></div>
+                                <![endif]-->
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio4/thumbnail.jpg" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title">Visual design winner</h2>
+                                        
+                                        <p class="thumbnail-description">Graphic, competitions, Social Media Campaign</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+                <article class="project cf">
+                    <a href="portfolioPages/portfolio5/index.html" title="Speech Interactive">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio5/thumbnail.jpg"></div>
+                                
+                                <!--[if (lt IE 9) & (!IEMobile)]>
+                                <div data-src="img/portfolio-5.jpg"></div>
+                                <![endif]-->
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio5/thumbnail.jpg" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title">Research + App Dev</h2>
+                                        
+                                        <p class="thumbnail-description">Interaction, User Research, Framer.js, Photoshop CC</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+                <article class="project cf">
+                    <a href="portfolioPages/portfolio6/index.html" title="Collection of Visual Designs">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio6/thumbnail.gif"></div>
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio6/thumbnail.gif" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title">Google internship + web UI</h2>
+                                        
+                                        <p class="thumbnail-description">sketch, wireframing, Graphics</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+                <article class="project cf">
+                    <a href="portfolioPages/portfolio7/index.html" title="Flow Analysis">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio7/thumbnail.jpg"></div>
+                                
+                                <!--[if (lt IE 9) & (!IEMobile)]>
+                                <div data-src="img/portfolio-1.jpg"></div>
+                                <![endif]-->
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio7/thumbnail.jpg" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title"> UX Analysis</h2>
+                                        
+                                        <p class="thumbnail-description">Research methods, Graphic Design</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+                <article class="project cf">
+                    <a href="portfolioPages/portfolio8/index.html" title="Hackathon">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio8/thumbnail.jpg"></div>
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio8/thumbnail.jpg" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title">Hackathons</h2>
+                                        
+                                        <p class="thumbnail-description">Framer.js, AngelHacks 2016, Hackathon</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+                <article class="project cf">
+                    <a href="portfolioPages/portfolio9/index.html" title="Watercolor Prints">
+                        <div class="thumb">
+                            <div data-picture data-alt="">
+                                <div data-src="portfolioPages/portfolio9/thumbnail.jpg"></div>
+                                
+                                <!--[if (lt IE 9) & (!IEMobile)]>
+                                <div data-src="img/portfolio-3.jpg"></div>
+                                <![endif]-->
+                                
+                                <noscript>
+                                    <img src="portfolioPages/portfolio9/thumbnail.jpg" alt="" />
+                                </noscript>
+                            </div>
+                        </div>
+
+                        <div class="project-content-container">
+                            <div class="project-content">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <h2 class="thumbnail-title">Healthy Snacking</h2>
+                                        
+                                        <p class="thumbnail-description"> Packaging, Print, Watercolor, Paper Prototyping </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </a>
+                </article>
+            <!--END .projects-feed-->
+            </div>
+			<div>
+				<p style="text-align:center; margin:40px; font-size:0.8em;"><a href="mailto:findme@marisa.lu">findme@marisa.lu</a>   |   240-778-5267  |  <span style="font-style:italic;"><a href = "https://github.com/MohahaMarisa">Github</a>    .    <a href = "https://www.instagram.com/artingbymarisa/">Instagram</a>    .    <a href = "">Artstation</a>    .    <a href="https://vimeo.com/user46893917/videos">Vimeo</a>   .   <a href = "">Tumblr</a>    .    <a href="https://www.linkedin.com/in/marisa-lu-062221113?trk=nav_responsive_tab_profile_pic">LinkedIn</a></span>  |  Copyright &copy; 2017 </p>
+			</div>
+                        
+        <!--END .site-content-->
+        </section>
+
+
+    <!--END .site-container-->
+    </div>
+	  <script src="scripts/jquery-2.1.4.min.js"></script>
+    <!-- <script src="scripts/scrollReact.js"></script> -->
+	<!--<script type="text/javascript" src="scripts/avoc/jquery.pace.js"></script>-->
+	<script type="text/javascript" src="scripts/avoc/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="scripts/avoc/jquery.easing.compatibility.js"></script>
+	<script type="text/javascript" src="scripts/avoc/tweenMax.js"></script>
+	<script type="text/javascript" src="scripts/avoc/jquery.wolf.min.js"></script>
+	<script type="text/javascript" src="scripts/avoc/script.js"></script>
+
+    <script src="scripts/jquery.fitvids.js"></script>
+    <script src="scripts/jquery.imagesloaded.min.js"></script>
+    <script src="scripts/main.js"></script>  
+    <script src="scripts/typed.js" type="text/javascript"></script>
+
+    <script>
+            $(document).ready(function(){
+                Typed.new('.hoverIntro', {
+                    strings: ["Hello, I'm <strong>Marisa Lu</strong>"],
+                    typeSpeed:100,
+                    backDelay: 1000,
+                    loop: false,
+                    contentType: 'html', // or text
+                    // defaults to false for infinite loop
+                    loopCount: 1,
+                });
+                $('.hoverDes').mouseenter(function(){
+                    $(this).text("Design");
+                    $(this).css("color","#90D4C5");
+                    $(this).text("Spatial Systems").fadeIn();
+                })
+                $('.hoverDes').mouseleave(function(){
+                    $(this).text("Spatial Systems");
+                    $(this).css("color","#737373");
+                    $(this).text("Design").fadeIn();
+                })
+                $('.hoverHCI').mouseenter(function(){
+                    $(this).text("HCI");
+                    $(this).css("color","#90D4C5");
+                    $(this).text("Human Computer Interaction").fadeIn();
+                })
+                $('.hoverHCI').mouseleave(function(){
+                    $(this).text("Human Computer Interaction");
+                    $(this).css("color","#737373");
+                    $(this).text("HCI").fadeIn();
+                })
+                $('.hoverCMU').mouseenter(function(){
+                    $(this).text("CMU");
+                    $(this).css("color","#90D4C5");
+                    $(this).text("Carnegie Mellon").fadeIn();
+                })
+                $('.hoverCMU').mouseleave(function(){
+                    $(this).text("Carnegie Mellon");
+                    $(this).css("color","#737373");
+                    $(this).text("CMU").fadeIn();
+                })
+                $('.hoverDigital').mouseenter(function(){
+                    $(this).text("digital ");
+                    $(this).css("color","#90D4C5");
+                    $(this).text("creative computing, interactive art, data viz, graphic illustration, ").fadeIn();
+                })
+                $('.hoverDigital').mouseleave(function(){
+                    $(this).text("creative computing, interactive art, aesthetic data visualization, graphic illustration, ");
+                    $(this).css("color","#737373");
+                    $(this).text("digital ").fadeIn();
+                })
+            });
+        </script>
+ 
+
+</body>
 </html>
