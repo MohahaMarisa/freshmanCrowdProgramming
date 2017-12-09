@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--Built/frankensteined with much thanks to StackOverflow, Jon Duckett's book "HTML&CSS design and build websites", Leventa Usta, and w3schools, format inspiration from MIT Media Lab grid structure, and responsive accordian display modified from Michael Ferry's code pen, as well as a type effect js library from mattboldst-->
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta charset="utf-8" />
+    <meta name="description" content="Marisa Lu's design portfolio and artwork" />
+    <meta name="keywords" content="design, HCI, interaction, portfolio, art, cmu, marisa, lu, lumar, scholarship, published, tei, gallery" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Marisa Lu" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!--<meta http-equiv="expires" content="Fri, 10 Jan 2016 23:59:59 GMT" />-->
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Art</title>
+   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
+    <link rel="stylesheet" href="../style.css" media="screen" />
+    <link rel="stylesheet" href="../accordian.css" media="screen" />
+    <link rel="stylesheet" href="../scripts/popupGallery/css/style.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Righteous&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+
+     <script src="../scripts/modernizr.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script><!--thanks ren davison for your help on the jquery below!-->
+     <script>
+            $(document).ready(function(){
+                $('.lumar').mouseenter(function(){
+                    $(this).text("ART/");
+                    $(this).text("LU/MAR/").fadeIn();
+
+                })
+                $('.lumar').mouseleave(function(){
+                    $(this).text("LU/MAR/");
+                    $(this).text("ART/").fadeIn();
+                })
+            });
+    </script>
+    <style>
+        .accordion ul li:nth-child(1) {
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/001/700/600/smaller_square/marisa-lu-one-rose.jpg?1451251596");
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("paperT.jpg");
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("wishT.jpg");
+
+}
+.accordion ul li:nth-child(4) {
+  background-image: url("junkyT.jpg");
+}
+.accordion ul li:nth-child(5) {
+    background-image: url("milk.jpg");
+}
+.accordion ul li:nth-child(6) {
+  background-image: url("festerT.jpg");
+}
+.accordion ul li:nth-child(7) {
+  background-image: url("seasharp.jpg");
+}
+.accordion ul li:nth-child(8) {
+  background-image: url("forbiddenT.jpg");
+}
+.accordion ul li:nth-child(9) {
+  background-image: url("tripinktiteT.jpg");
+}
+.accordion ul li:nth-child(10) {
+  background-image: url("lightengine.gif");
+}
+.accordion ul li:nth-child(11) {
+  background-image: url("womanT.jpg");
+}
+    </style>
+</head>
+
+<body>
+
+
+    
+    <a href="#cd-nav" class="cd-nav-trigger">Menu 
+        <span class="cd-nav-icon"></span>
+
+        <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+            <circle fill="transparent" stroke="#90D4C5" stroke-width="2" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+        </svg>
+    </a>
+        
+    <div id="cd-nav" class="cd-nav">
+        <div class="cd-navigation-wrapper">
+            <div class="cd-half-block">
+
+
+                <nav>
+                    <ul class="cd-primary-nav">
+                        <li><a href="index.html">Showcase</a></li>
+                        <li><a href="#0" class="selected">Art</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="LuMarisaResume.pdf" target="_blank">Resume</a></li>
+                        <li><a href="news.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div><!-- .cd-half-block -->
+            
+            <div class="cd-half-block">
+                <address>
+                    <ul class="cd-contact-info">
+                        <li><a href="mailto:findme@marisa.lu">findme@marisa.lu</a></li>
+                        <li>240-778-5267</li>
+                    </ul>
+                    <ul class="cd-contact-socials">
+                        <li><a href="https://vimeo.com/user46893917/videos">Vimeo</a></li> 
+                        <li><a href="https://www.mohahamarisa.artstation.com">Artstation</a></li> 
+                        <li><a href="https://www.linkedin.com/in/marisa-lu-062221113?trk=nav_responsive_tab_profile_pic">LinkedIn</a></li>     
+                        <li><a href="https://www.manillalu.tumblr.com">Tumblr</a></li>
+                        <li><a href="https://www.instagram.com/artingbymarisa/">Instagram</a></li>     
+                    </ul>
+                </address>
+            </div> <!-- .cd-half-block -->
+        </div> <!-- .cd-navigation-wrapper -->
+    </div> <!-- .cd-nav -->
+
+<!--     <div class="site-container"> -->
+
+        <header class="art-header">
+            <div class="art-title"><span class="lumar"><a href="index.html">ART/</a></span></div>
+
+            <!-- <div class="cf"></div> -->
+
+            <!-- <div class="site-tagline" title="hover over highlighted text">
+                <p>A reflection of my <span style="color:#90D4C5" class="hoverInterests">eclectic interests</span></p>
+            </div> -->
+            <div class="accordion">
+              <ul class="gallery">
+                <li>
+                  <div>
+                    <a href="" title="A series of watercolor graphics made for a custom stationary set for client." class="image-link" target="_blank">
+                      <h2 style="color:#90D4C5;">Commissioned Work</h2>
+                      <p>Watercolor stationary set for a wedding</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="paper.jpg" title="Rapid paper and clay prototype of a conch shell. Original design. DIY with template at marisa.lu/freebies" class="image-link" target="_blank">
+          <h2 style="color:white;">Rapid Form Prototyping</h2>
+          <p>Phyllotactic configurations are fun</p>
+        </a>
+              </div>
+              </li>
+                <li>
+                  <div>
+                    <a href="wish.jpg" title="'Wish upon the Ordinary' 18 x 24 National Winner for PTSA Reflection 2014" class="image-link" target="_blank">
+          <h2>'Wish upon the Ordinary'</h2>
+          <p>mixed media chalk pastel</p>
+        </a>
+                  </div>
+                </li>
+    <li>
+      <div>
+        <a href="junkfood.jpg" title="part of the 'Gilded Age of Food' series. Acrylic and oil on 36 x 24 canvas" class="image-link" target="_blank">
+          <h2 style="color:white">#3 from 'Gilded Age of Food' series</h2>
+          <p>Acrylic and oil on 36 x 24 canvas</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="milk.jpg" title="Excerpt from a book I was commissioned to illustrate for" class="image-link" target="_blank">
+          <h2 style="color:#90D4C5;">A page from an illustration commission</h2>
+          <p>Digitally painted in Photoshop</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="fester.jpg" title="'Bad thoughts are like birds; you can't help if one flies over your head, but you can keep them from nesting in your hair." class="image-link" target="_blank">
+          <h2 style="color:#90D4C5;">Festering</h2>
+          <p>18 x 24 Acrylic on Canvasboard</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="seasharpfull.jpg" title="Cover art for original comic series'Sea Sharp'" class="image-link" target="_blank">
+          <h2 style="color:#90D4C5;">Cover art</h2>
+          <p>will put a link to the rest of the pages...</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="forbidden.jpg" title="'The Cost Of Ignorance?'" class="image-link" target="_blank">
+          <h2>The Cost of Ignorance?</h2>
+          <p>part of the 'Gilded Age of Food' series</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="tripinktite.jpg" title="" class="image-link" target="_blank">
+          <h2>Tripinktite</h2>
+          <p>mixed media crayon, pencil and ink</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="lightengine.gif" title="Paper desk light with different lighting modes" class="image-link" target="_blank" >
+          <h2 style="color:white;">Desk Lighting Engine</h2>
+          <p>Paper prototype</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="woman.jpg" title="Sold in exhibition" class="image-link" target="_blank">
+          <h2 style="color:#90D4C5;">'Lady of Many Hues'</h2>
+          <p>Sold in exhibition</p>
+        </a>
+      </div>
+    </li>
+    <!-- <li>
+      <div>
+        <a href="bottle.jpg" title="From a series of product studies" class="image-link" target="_blank">
+          <h2>Product Study</h2>
+          <p>I really liked this tea bottle</p>
+        </a>
+      </div>
+    </li> -->
+  </ul>
+</div>
+            
+        <!-- </header> --><!-- / .site-header -->
+
+<!--         </section class="site-content"> -->
+            
+            
+                        
+        <nav role="navigation">
+            <ul class="cd-pagination animated-buttons custom-icons">
+                <!-- <li class="button"><a href="#0"><i>Prev</i></a></li> -->
+                <li><a class="current" href="#0">1</a></li>
+                <li><a href="art2.html">2</a></li>
+                 <li><a href="art3.html">3</a></li>
+                <li><a href="art4.html">4</a></li>
+                <li class="button"><a href="art2.html"><i>Drawing</i></a></li>
+            </ul>
+        </nav><!-- cd-pagination-wrapper -->
+        <!--END .site-content-->
+        </section>
+
+         <footer class="site-footer cf">
+            <p class="footer-text">© Copyright 2017 </p>
+<!--             <nav class="languages" role="navigation">
+              <ul>
+             
+                <li class="active"><a href="#">EN |</a></li>
+                <li><a href="#">FR</a></li>
+             
+              </ul>
+            </nav> --> 
+        </footer>
+    <!--END .site-container-->
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+    <script src="../scripts/popupGallery/js/index.js"></script>
+    <script src="../scripts/jquery-2.1.4.min.js"></script>
+    <script src="../scripts/jquery.fitvids.js"></script>
+    <script src="../scripts/jquery.imagesloaded.min.js"></script>
+    <script src="../scripts/main.js"></script>  
+ 
+
+</body>
+</html>

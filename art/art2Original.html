@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--Built/frankensteined with much thanks to StackOverflow, Jon Duckett's book "HTML&CSS design and build websites", Leventa Usta, and w3schools-->
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta charset="utf-8" />
+    <meta name="description" content="Marisa Lu's design portfolio and artwork" />
+    <meta name="keywords" content="design, HCI, interaction, portfolio, art, cmu, marisa, lu, lumar, scholarship, published, tei, gallery" />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="author" content="Marisa Lu" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!--<meta http-equiv="expires" content="Fri, 10 Jan 2016 23:59:59 GMT" />-->
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Drawing</title>
+   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
+    <link rel="stylesheet" href="../style.css" media="screen" />
+    <link rel="stylesheet" href="../accordian.css" media="screen" />
+    <link rel="stylesheet" href="../scripts/popupGallery/css/style.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Righteous&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+
+     <script src="../scripts/modernizr.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script><!--thanks ren davison for your help on the jquery below!-->
+     <script>
+            $(document).ready(function(){
+                $('.lumar').mouseenter(function(){
+                    $(this).text("DRAWING");
+                    $(this).css("color","#90D4C5");
+                    $(this).text("LU/MAR/").fadeIn();
+
+                })
+                $('.lumar').mouseleave(function(){
+                    $(this).text("LU/MAR/");
+                    $(this).css("color","DarkGray");
+                    $(this).text("SKETCHING").fadeIn();
+                })
+            });
+    </script>
+    <style>
+        .accordion ul li:nth-child(1) {
+  background-image: url("staplerT.jpg");
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("sculptureT.jpg");
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("productT.jpg");
+}
+.accordion ul li:nth-child(4) {
+  background-image: url("lenticularT.jpg");
+}
+.accordion ul li:nth-child(5) {
+  background-image: url("arrowsT.jpg");
+}
+.accordion ul li:nth-child(6) {
+  background-image: url("machineT.jpg");
+}
+.accordion ul li:nth-child(7) {
+  background-image: url("bottleT.jpg");
+}
+.accordion ul li:nth-child(8) {
+  background-image: url("kissT.jpg");
+}
+.accordion ul li:nth-child(9) {
+  background-image: url("chargerT.gif");
+}
+.accordion ul li:nth-child(10) {
+  background-image: url("gearT.gif");
+}
+    </style>
+</head>
+
+<body>
+
+
+    
+    <a href="#cd-nav" class="cd-nav-trigger">Menu 
+        <span class="cd-nav-icon"></span>
+
+        <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+            <circle fill="transparent" stroke="#90D4C5" stroke-width="2" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+        </svg>
+    </a>
+        
+    <div id="cd-nav" class="cd-nav">
+        <div class="cd-navigation-wrapper">
+            <div class="cd-half-block">
+
+
+                <nav>
+                    <ul class="cd-primary-nav">
+                        <li><a href="../index.html">Showcase</a></li>
+                        <li><a href="#0" class="selected">Art</a></li>
+                        <li><a href="../profile.html">Profile</a></li>
+                        <li><a href="../LuMarisaResume.pdf" target="_blank">Resume</a></li>
+                        <li><a href="../news.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div><!-- .cd-half-block -->
+            
+            <div class="cd-half-block">
+                <address>
+                    <ul class="cd-contact-info">
+                        <li><a href="mailto:findme@marisa.lu">findme@marisa.lu</a></li>
+                        <li>240-778-5267</li>
+                    </ul>
+                    <ul class="cd-contact-socials">
+                        <li><a href="https://vimeo.com/user46893917/videos">Vimeo</a></li> 
+                        <li><a href="https://www.mohahamarisa.artstation.com">Artstation</a></li> 
+                        <li><a href="https://www.linkedin.com/in/marisa-lu-062221113?trk=nav_responsive_tab_profile_pic">LinkedIn</a></li>     
+                        <li><a href="https://www.manillalu.tumblr.com">Tumblr</a></li>
+                        <li><a href="https://www.instagram.com/artingbymarisa/">Instagram</a></li>     
+                    </ul>
+                </address>
+            </div> <!-- .cd-half-block -->
+        </div> <!-- .cd-navigation-wrapper -->
+    </div> <!-- .cd-nav -->
+
+<!--     <div class="site-container"> -->
+
+        <header class="art-header">
+            <div class="art-title"><span class="lumar"><a href="index.html" style="color:DarkGray;">DRAWING</a></span></div>
+
+            <!-- <div class="cf"></div> -->
+
+            <!-- <div class="site-tagline" title="hover over highlighted text">
+                <p>A reflection of my <span style="color:#90D4C5" class="hoverInterests">eclectic interests</span></p>
+            </div> -->
+            <div class="accordion">
+              <ul class="gallery">
+                <li>
+                  <div>
+                    <a href="stapler.jpg" title="Mini Stapler study" class="image-link" target="_blank">
+                    <h2 style="color:black;">Product Study</h2>
+                    <p>pen, copic, blue pencil</p>
+                  </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="sculptureDuo.jpg" title="Technical practice. Pencil recreation of Torse du Belvédère" class="image-link" target="_blank">
+                      <h2>Torse du Belvédère</h2>
+                      <p>technical pencil study</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="animals.jpg" title="What would you get if you mixed a macbook charger with a flashdrive and threw some whimsy in there? " target="_blank" class="image-link">
+                      <h2>Charger + flash drive = ?</h2>
+                      <p>whimsical product studies</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="lenticular.jpg" title="Infographic of how Lenticular Clouds are formed" target="_blank"class="image-link">
+                      <h2 style="">Infographic</h2>
+                      <p>how lenticular clouds form</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="arrow.jpg" title="arrow abstraction of the movement of air in a lenticular cloud" target="_blank"class="image-link">
+                      <h2 style="">Cloud abstracted arrows</h2>
+                      <p>lenticular cloud currents</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="robot.jpg" title="How lenticular clouds are formed..." class="image-link" target="_blank">
+                      <h2 style="color:#90D4C5;">Lenticular CLouding Machine</h2>
+                      <p>Some fun, completely unrealistic form & idea studies</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="bottle.jpg" title="From a series of product studies" class="image-link" target="_blank">
+                    <h2>Product Study</h2>
+                    <p>I really liked this tea bottle</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="kiss.jpg" title="Roaring 20's fashion magazine inspired sketch" class="image-link" target="_blank">
+                      <h2>I love pencils</h2>
+                      <p>and Leyendecker's illustration style</p>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a href="charger.jpg" title="Another product form study" class="image-link" target="_blank">       
+                      <h2>Form Study</h2>
+                      <p>Practice speed drawing</p>
+                    </a>
+                  </div>
+                </li>
+    <li>
+      <div>
+        <a href="gear.jpg" title="gear for a persona exercise" class="image-link" target="_blank">
+          <h2 style="color:#90D4C5;">Rock Climbing gear</h2>
+          <p>Copic and ink</p>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+            
+        <!-- </header> --><!-- / .site-header -->
+
+<!--         </section class="site-content"> -->
+            
+            
+                        
+        <nav role="navigation">
+            <ul class="cd-pagination animated-buttons custom-icons">
+                <li class="button"><a href="index.html"><i>Prev</i></a></li>
+                <li><a href="index.html">1</a></li>
+                <li><a class="current" href="#0">2</a></li>
+                <li><a href="art3.html">3</a></li>
+                <li><a href="art4.html">4</a></li>
+                <!-- <li><span>...</span></li>
+                <li><a href="#0">6</a></li> -->
+                <li class="button"><a href="art3.html"><i>Next</i></a></li>
+            </ul>
+        </nav><!-- cd-pagination-wrapper -->
+        <!--END .site-content-->
+        </section>
+
+         <footer class="site-footer cf">
+            <p class="footer-text">© Copyright 2017 </p>
+<!--             <nav class="languages" role="navigation">
+              <ul>
+             
+                <li class="active"><a href="#">EN |</a></li>
+                <li><a href="#">FR</a></li>
+             
+              </ul>
+            </nav> --> 
+        </footer>
+    <!--END .site-container-->
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+    <script src="../scripts/popupGallery/js/index.js"></script>
+    <script src="../scripts/jquery-2.1.4.min.js"></script>
+    <script src="../scripts/jquery.fitvids.js"></script>
+    <script src="../scripts/jquery.imagesloaded.min.js"></script>
+    <script src="../scripts/main.js"></script>  
+ 
+
+</body>
+</html>
